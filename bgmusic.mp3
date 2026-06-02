@@ -1,0 +1,25 @@
+function openVideo(){
+
+document.getElementById("notePage").style.display="none";
+document.getElementById("videoPage").style.display="block";
+
+const bgMusic =
+document.getElementById("bgMusic");
+
+bgMusic.pause();
+
+const video =
+document.getElementById("birthdayVideo");
+
+video.play();
+
+video.onended=function(){
+
+document.getElementById("videoPage").style.display="none";
+document.getElementById("wishPage").style.display="block";
+
+bgMusic.play();
+
+};
+
+}
