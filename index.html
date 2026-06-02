@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dear Anjali ✨</title><style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Georgia,serif;
+background:linear-gradient(135deg,#111,#1d1d1d,#2b2b2b);
+color:white;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow-x:hidden;
+}
+
+.container{
+width:100%;
+max-width:800px;
+text-align:center;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,215,0,0.3);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,215,0,0.15);
+}
+
+h1{
+color:gold;
+margin-bottom:15px;
+font-size:2.8rem;
+}
+
+.intro{
+line-height:1.8;
+font-size:1.1rem;
+margin-bottom:30px;
+}
+
+.note{
+margin-top:20px;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+}
+
+.note h2{
+color:gold;
+margin-bottom:15px;
+}
+
+.note p{
+line-height:1.9;
+font-size:1.05rem;
+}
+
+button{
+margin-top:25px;
+padding:14px 28px;
+font-size:16px;
+font-weight:bold;
+border:none;
+border-radius:14px;
+background:gold;
+cursor:pointer;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#videoPage{
+display:none;
+}
+
+video{
+width:100%;
+border-radius:20px;
+margin-top:20px;
+}
+
+#wishPage{
+display:none;
+}
+
+.sparkle{
+position:fixed;
+animation:float 8s linear infinite;
+opacity:0.7;
+pointer-events:none;
+}
+
+@keyframes float{
+from{
+transform:translateY(100vh);
+}
+to{
+transform:translateY(-120px);
+}
+}
+
+</style></head><body><div class="container"><!-- PAGE 1 --><div id="notePage" class="card"><h1>Dear Anjali ✨</h1><p class="intro">Happy Birthday 🎂
+
+<br><br>
+
+Before you continue...
+
+I just wanted to say thank you
+for being such a kind,
+helpful and amazing person.
+
+</p><div class="note"><h2>🌸 Note #1</h2><p>Tumhari ek problem hai...
+
+<br><br>
+
+Tum itni acchi kyun ho yaar? 😄
+
+<br><br>
+
+Jab bhi help chahi hoti hai,
+tum kabhi mana nahi karti.
+
+<br><br>
+
+Aur honestly...
+
+ye quality bahut rare hoti hai.
+
+</p><button onclick="openVideo()">
+💌 Open Note #1
+</button></div></div><!-- PAGE 2 --><div id="videoPage" class="card"><h1>🎵 Subhanallah</h1><video id="birthdayVideo" controls>
+<source src="subhanallah.mp4" type="video/mp4">
+</video></div><!-- PAGE 3 --><div id="wishPage" class="card"><h1>🎂 Happy Birthday Anjali 🎂</h1><p class="intro">May this year bring you lots of happiness,
+success and beautiful memories.
+
+<br><br>
+
+Keep smiling,
+keep shining ✨
+
+<br><br>
+
+And thank you for always being so kind.
+
+🌸
+
+</p><button onclick="location.reload()">
+🔄 Watch Again
+</button></div></div><script>
+
+function openVideo(){
+
+document.getElementById("notePage").style.display="none";
+document.getElementById("videoPage").style.display="block";
+
+const video =
+document.getElementById("birthdayVideo");
+
+video.play();
+
+video.onended=function(){
+
+document.getElementById("videoPage").style.display="none";
+document.getElementById("wishPage").style.display="block";
+
+};
+
+}
+
+for(let i=0;i<25;i++){
+
+let star=document.createElement("div");
+
+star.className="sparkle";
+
+star.innerHTML="✨";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.fontSize=
+(12+Math.random()*18)+"px";
+
+star.style.animationDuration=
+(5+Math.random()*6)+"s";
+
+document.body.appendChild(star);
+
+}
+
+</script></body>
+</html>
